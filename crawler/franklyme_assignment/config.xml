@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+<data
+		depth='3'
+		host = "localhost"
+		port = "3306"
+		db_user = "root"
+		db_pass = ""
+		db = "surya"
+		url = "https://news.ycombinator.com/"
+		query = "news?p="
+
+
+/>
+</config>
