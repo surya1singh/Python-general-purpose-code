@@ -21,3 +21,10 @@ class HostResolver(object):
     def has_host(self, host):
         """ return True if host is in cache, else False"""
         return host in self._cache
+
+
+if __name__ == '__main__'()
+    hostresolver = HostResolver()
+    assert hostresolver.has_host('localhost') == False
+    assert hostresolver('localhost') == '127.0.0.1'
+    assert hostresolver.has_host('localhost') == True
