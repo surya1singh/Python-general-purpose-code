@@ -1,5 +1,15 @@
-2018-08-02 17:02:01 - test_logging.log - (MainThread) - DEBUG - This is debug info
-2018-08-02 17:02:01 - test_logging.log - (MainThread) - INFO - This is info info
-2018-08-02 17:02:01 - test_logging.log - (MainThread) - WARNING - This is warning info
-2018-08-02 17:02:01 - test_logging.log - (MainThread) - ERROR - This is error info
-2018-08-02 17:02:01 - test_logging.log - (MainThread) - CRITICAL - This is critical info
+2018-08-02 17:14:05 - test_logging.log - (MainThread) - DEBUG - This is debug info
+2018-08-02 17:14:05 - test_logging.log - (MainThread) - INFO - This is info info
+2018-08-02 17:14:05 - test_logging.log - (MainThread) - WARNING - This is warning info
+2018-08-02 17:14:05 - test_logging.log - (MainThread) - ERROR - This is error info
+2018-08-02 17:14:05 - test_logging.log - (MainThread) - CRITICAL - This is critical info
+2018-08-02 17:14:05 - test_logging.log - (Thread-1  ) - DEBUG - This is debug info
+2018-08-02 17:14:05 - test_logging.log - (Thread-2  ) - DEBUG - This is debug info
+2018-08-02 17:14:05 - test_logging.log - (Thread-1  ) - INFO - This is info info
+2018-08-02 17:14:05 - test_logging.log - (Thread-2  ) - INFO - This is info info
+2018-08-02 17:14:05 - test_logging.log - (Thread-2  ) - WARNING - This is warning info
+2018-08-02 17:14:05 - test_logging.log - (Thread-1  ) - WARNING - This is warning info
+2018-08-02 17:14:05 - test_logging.log - (Thread-1  ) - ERROR - This is error info
+2018-08-02 17:14:05 - test_logging.log - (Thread-2  ) - ERROR - This is error info
+2018-08-02 17:14:05 - test_logging.log - (Thread-1  ) - CRITICAL - This is critical info
+2018-08-02 17:14:05 - test_logging.log - (Thread-2  ) - CRITICAL - This is critical info
