@@ -1,4 +1,4 @@
-from threading import Thread, Lock
+from threading import Thread, Lock, active_count, current_thread, Timer, enumerate
 import time
 
 def first_threads():
@@ -29,7 +29,8 @@ print("Threads are not synchronized")
 for i in range(6):
     threadX = myThread()
     threadX.start()
-print("Exiting Main Thread")
+print("active thread at this point :", active_count())
+print(current_thread()) # main thread
 time.sleep(2)
 
 
@@ -44,6 +45,7 @@ class myThreadLock(Thread):
       print("Starting" , self.getName())
       threadLock.acquire()
       time.sleep(1)
+      print(current_thread()) # child thread
       threadLock.release()
       print("Exiting" , self.getName())
 
@@ -55,3 +57,19 @@ for i in range(6):
     threadX.start()
 print("Exiting Main Thread")
 time.sleep(1)
+
+
+# other methods
+# threading.enumerate() #This function returns a list of all active threads. It is easy to use. Let us write a script to put it in use:
+
+for thread in enumerate():
+    print("Thread name is %s." % thread.getName())
+
+
+#threading.Timer() #This function of threading module is used to create a new Thread and letting it know that it should only start after a specified time. Once it starts, it should call the specified function.
+
+def delayed():
+    print("I am printed after 3 seconds!")
+
+thread = Timer(3, delayed)
+thread.start()
