@@ -1,0 +1,5 @@
+2018-08-02 17:02:01 - test_logging.log - (MainThread) - DEBUG - This is debug info
+2018-08-02 17:02:01 - test_logging.log - (MainThread) - INFO - This is info info
+2018-08-02 17:02:01 - test_logging.log - (MainThread) - WARNING - This is warning info
+2018-08-02 17:02:01 - test_logging.log - (MainThread) - ERROR - This is error info
+2018-08-02 17:02:01 - test_logging.log - (MainThread) - CRITICAL - This is critical info
