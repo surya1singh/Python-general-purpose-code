@@ -1,0 +1,4 @@
+2018-08-02 17:32:03 - test_logging_new.log - (MainThread) - INFO - this will log into another file
+2018-08-02 17:32:03 - test_logging_new.log - (MainThread) - DEBUG - this will log into another file
+2018-08-02 17:32:03 - test_logging_new.log - (MainThread) - WARNING - this will log into another file
+2018-08-02 17:32:03 - test_logging_new.log - (MainThread) - ERROR - this will log into another file
