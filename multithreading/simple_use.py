@@ -1,4 +1,4 @@
-from threading import Thread
+from threading import Thread, Lock
 import time
 
 def first_threads():
@@ -24,13 +24,34 @@ class myThread(Thread):
       print("Exiting" , self.getName())
 
 
-
+print("Threads are not synchronized")
 # Create new threads
-thread1 = myThread()
-thread2 = myThread()
-
-# Start new Threads
-thread1.start()
-thread2.start()
-
+for i in range(6):
+    threadX = myThread()
+    threadX.start()
 print("Exiting Main Thread")
+time.sleep(2)
+
+
+
+threadLock = Lock()
+
+class myThreadLock(Thread):
+   def __init__(self):
+      super(myThreadLock, self).__init__()
+
+   def run(self):
+      print("Starting" , self.getName())
+      threadLock.acquire()
+      time.sleep(1)
+      threadLock.release()
+      print("Exiting" , self.getName())
+
+
+print("\n\nThreads are not synchronized")
+# Create new threads
+for i in range(6):
+    threadX = myThreadLock()
+    threadX.start()
+print("Exiting Main Thread")
+time.sleep(1)
