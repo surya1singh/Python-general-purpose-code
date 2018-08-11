@@ -65,7 +65,7 @@ class Tree():
         if self.is_leaf(p):
             return 0
         else:
-            return 1 + max(height(c) for c in self.children(p))
+            return 1 + max(self.height(c) for c in self.children(p))
 
 
 class BinaryTree(Tree):
@@ -75,24 +75,25 @@ class BinaryTree(Tree):
         """Return a Position representing p's left child.
         Return None if p does not have a left child.
         """
-        raise NotImplementedError( must be implemented by subclass )
+        raise NotImplementedError("must be implemented by subclass")
 
     def right(self, p):
         """Return a Position representing p's right child.
         Return None if p does not have a right child.
         """
-        raise NotImplementedError( must be implemented by subclass )
+        raise NotImplementedError("must be implemented by subclass")
 
     # ---------- concrete methods implemented in this class ----------
     def sibling(self, p):
         """Return a Position representing p's sibling (or None if no sibling)."""
         parent = self.parent(p)
         if parent is None:
-            return None else:
-        if p == self.left(parent):
-            return self.right(parent)
+            return None
         else:
-            return self.left(parent)
+            if p == self.left(parent):
+                return self.right(parent)
+            else:
+                return self.left(parent)
 
     # p must be the root # root has no sibling
     def children(self, p):
